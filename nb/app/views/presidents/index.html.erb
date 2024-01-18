@@ -1,0 +1,30 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Term Project</h1>
+
+<div class="alignRow">
+
+
+
+<div id="presidents">
+  <% @presidents.each do |president| %>
+  <div class="imageColumn">
+
+  <h3>
+    <%= president.name %>
+  </h3>
+
+    <img src="<%= president.image_url %>" width="500" height="700" alt=""/>
+
+    <p>
+      <%= link_to president.name, president %>
+    </p>
+    </div>
+
+  <% end %>
+</div>
+
+</div>
+
+<%= link_to "New president", new_president_path %>
+
